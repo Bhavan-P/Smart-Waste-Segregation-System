@@ -1,0 +1,136 @@
+/* ✨ General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: #F4F4F4; /* Light Gray */
+    color: #333; /* Dark Gray for text */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    background: #2C3E50; /* Deep Blue */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header Buttons */
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn, .developer-btn {
+    background: #FFD700;
+    color: black;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-btn:hover, .developer-btn:hover {
+    background: #FFC107;
+}
+
+/* Pop-Up Styling */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000; /* Ensures pop-up is always above slots */
+}
+
+/* Fixed Position for Developer Pop-Up */
+.fixed-popup {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* About Section */
+.about {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Two-Column Layout */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Camera & Result Sections */
+.slot {
+    width: 45%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 350px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* ✅ Added Border */
+    border: 3px solid #2C3E50; /* Deep Blue Border */
+}
+
+/* Hover Effect on Slots */
+.slot:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+
+    /* ✅ Optional Hover Border Effect */
+    border-color: #FFC107; /* Golden Yellow */
+}
+
+/* Scan Button Inside Camera Slot */
+.capture-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2C3E50;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.capture-btn:hover {
+    background: #1A252F;
+    transform: scale(1.1);
+}
+
+/* Reduced Font Size for Type */
+.waste-type {
+    font-size: 18px;
+    font-weight: bold;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Waste Segregation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>♻️ Smart Waste Segregation System</h1>
+        <div class="header-buttons">
+            <button class="login-btn" onclick="showLogin()">🔑 Login</button>
+            <button class="developer-btn" onclick="showDevelopers()">👨‍💻 Developers</button>
+        </div>
+    </header>
+
+    <!-- Login Form Pop-Up -->
+    <div id="loginPopup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Enter Username">
+            <input type="password" id="password" placeholder="Enter Password">
+            <button onclick="loginUser()">Login</button>
+            <p>Don't have an account? <button class="create-btn" onclick="showSignup()">Create Account</button></p>
+            <button onclick="closePopup()">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Developers Pop-Up (Fixed Position) -->
+    <div id="developersPopup" class="popup hidden fixed-popup">
+        <div class="popup-content">
+            <h2>Meet the Developers</h2>
+            <ul>
+                <li>👨‍💻 Bhavan Periasamy - Project Lead And AI Developer</li>
+                <li>👨‍💻 Aravind Murugan - AI Developer</li>
+                <li>👨‍💻 Balaji V - AI Developer</li>
+            </ul>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About the System</h2>
+        <p>
+            The Smart Waste Segregation System utilizes AI and camera-based detection 
+            to classify waste into categories like Biodegradable, Recyclable, and Non-Recyclable. 
+            This system enhances waste management efficiency and promotes sustainability 
+            by automating the sorting process.
+        </p>
+    </section>
+
+    <main class="container">
+        <!-- Left: Camera Section with Scan Button Inside -->
+        <div class="camera-section slot">
+            <h2>Live Camera Feed</h2>
+            <video id="cameraFeed" autoplay></video>
+            <button class="capture-btn" onclick="captureImage()">📸 Scan Waste</button>
+        </div>
+
+        <!-- Right: AI Result Section -->
+        <div class="result-section slot">
+            <h2>AI Classification</h2>
+            <p class="waste-type"><strong>Type:</strong> <span id="wasteType">--</span></p>
+            <canvas id="capturedImage"></canvas>
+        </div>
+    </main>
+
+</body>
+</html>
